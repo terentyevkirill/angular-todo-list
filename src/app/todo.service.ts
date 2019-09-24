@@ -76,7 +76,7 @@ export class TodoService {
       return of([]);
     }
 
-    return this.http.get<Todo[]>(`${this.todosUrl}/?name=${term}`).pipe(
+    return this.http.get<Todo[]>(`${this.todosUrl}/?text=${term}`).pipe(
       tap(_ => this.log(`found todos matching "${term}"`)),
       catchError(this.handleError<Todo[]>('searchTodos', []))
     );

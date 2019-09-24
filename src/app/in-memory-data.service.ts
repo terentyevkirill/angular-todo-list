@@ -15,11 +15,11 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 3, text: 'Cook dinner' },
       { id: 4, text: 'Do workout' },
       { id: 5, text: 'Drink coffee' },
-      { id: 6, text: 'Feed cat' },
-      { id: 7, text: 'Do homework' },
-      { id: 8, text: 'Cook dinner' },
-      { id: 9, text: 'Do workout' },
-      { id: 10, text: 'Drink coffee' }
+      { id: 6, text: 'Meet with Ann' },
+      { id: 7, text: 'Read book' },
+      { id: 8, text: 'Ride a bike' },
+      { id: 9, text: 'Buy avocado' },
+      { id: 10, text: 'Call dad' }
     ];
 
     return {todos};

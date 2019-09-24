@@ -1,0 +1,15 @@
+<div *ngIf="todo">
+
+    <h2>{{ todo.text | uppercase }}</h2>
+    <div><span>id: </span>{{todo.id}}</div>
+    <div>
+        <label>Text:
+            <!-- Two way data binding -->
+            <input [(ngModel)]="todo.text" placeholder="text"/>
+        </label>
+    </div>
+</div>
+<button (click)="goBack()">Go back</button>
+<button (click)="save()">Save</button>
+<button (click)="delete()">Delete</button>
+

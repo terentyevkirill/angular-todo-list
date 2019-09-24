@@ -1,0 +1,82 @@
+$black: #333;
+$white: #EEE;
+$lightgray: #DDD;
+$blue: #405061;
+$lightblue: #607D8B;
+
+.todos {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 20em;
+}
+.todos li {
+  position: relative;
+  cursor: pointer;
+  background-color: $white;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.todos li:hover {
+  color: $lightblue;
+  background-color: $lightgray;
+  left: .1em;
+}
+
+.todos a {
+  color: $black;
+  text-decoration: none;
+  position: relative;
+  top: -4px;
+  display: block;
+  width: 250px;
+}
+
+.todos a:hover {
+  color:$lightblue;
+}
+
+.todos .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: $blue;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+button {
+  background-color: $white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.delete {
+  position: relative;
+  left: 270px;
+  top: -34px;
+  background-color: gray !important;
+  color: white;
+}
+
+input {
+  margin-right: 5px;
+}

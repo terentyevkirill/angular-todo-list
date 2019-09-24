@@ -25,7 +25,6 @@ export class TodoService {
     );
   }
 
-
   getTodoNo404<Data>(id: number): Observable<Todo> {
     const url = `${this.todosUrl}/?id=${id}`;
     return this.http.get<Todo[]>(url)

@@ -11,7 +11,7 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoSearchComponent } from './todo-search/todo-search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TodosComponent,
     TodoDetailComponent,
     TodoSearchComponent,
-    DashboardComponent
+    DashboardComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

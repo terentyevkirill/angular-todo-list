@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Todo } from '../Todo';
+import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
 
 @Component({
@@ -23,9 +23,9 @@ export class TodosComponent implements OnInit {
   }
 
   add(text: string): void {
-    text = text .trim();
+    text = text.trim();
     if (!text) { return; }
-    this.todoService.addTodo({text} as Todo)
+    this.todoService.addTodo({ text } as Todo)
       .subscribe(todo => this.todos.push(todo));
   }
 

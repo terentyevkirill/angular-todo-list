@@ -1,4 +1,4 @@
-<h3>Newest Todos</h3>
+<h3 *ngIf="todos.length else notodos">Newest Todos</h3>
 <div class="grid grid-pad">
     <a *ngFor="let todo of todos" class="col-1-4"
         routerLink="/detail/{{todo.id}}">
@@ -7,5 +7,6 @@
         </div>
     </a>
 </div>
-
 <app-todo-search></app-todo-search>
+
+<ng-template #notodos><h3>You have not todos yet</h3></ng-template>

@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 $padding: 20px;
 $white: #eee;
 $blue: #3f525c;
@@ -7,10 +9,10 @@ $ligt_blue: #607d8b;
     float: left;
     padding-right: $padding;
     padding-bottom: $padding;
-}
-
-[class*='col-']:last-of-type {
-    padding-right: $padding;
+    
+    &:last-of-type {
+        padding-right: $padding;
+    }
 }
 
 a {
@@ -34,6 +36,7 @@ h4 {
 
 .grid {
     margin: 0;
+    display: flex;
 }
 
 .col-1-4 {
@@ -48,12 +51,11 @@ h4 {
     min-width: 120px;
     background-color: $blue;
     border-radius: 2px;
-}
-
-.module:hover {
-    background-color: $white;
-    cursor: pointer;
-    color: $ligt_blue;
+    &:hover {
+        background-color: $white;
+        cursor: pointer;
+        color: $ligt_blue;
+    }
 }
 
 .grid-pad {
@@ -61,7 +63,7 @@ h4 {
 }
 
 .grid-pad > [class*='col-']:last-of-type {
-    padding-right: $padding;
+    padding-right: $padding;    
 }
 
 @media (max-width: 600px) {

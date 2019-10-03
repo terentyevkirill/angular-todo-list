@@ -25,6 +25,7 @@ $lightblue: #607D8B;
   background-color: $lightgray;
   left: .1em;
 }
+ 
 
 .todos a {
   color: $black;
@@ -50,7 +51,7 @@ $lightblue: #607D8B;
   left: -1px;
   height: 1.8em;
   min-width: 16px;
-  text-align: right;
+  text-align: center;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
@@ -79,4 +80,5 @@ button.delete {
 
 input {
   margin-right: 5px;
+  width: 14em;
 }

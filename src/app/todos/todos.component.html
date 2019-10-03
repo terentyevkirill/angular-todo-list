@@ -1,4 +1,4 @@
-<h2 *ngIf="todos.length else notodos">My Todos</h2>
+<h2 *ngIf="todos.length; else notodos">My Todos</h2>
 <div>
     <label>Todo text:
         <input #todoText />
@@ -13,7 +13,7 @@
             <span class="badge">{{todo.id}}</span> {{todo.text}}
         </a>
         <button class="delete" title="delete todo"
-                (click)="delete(todo)">x</button>
+                (click)="delete(todo    )">x</button>
     </li>
 </ul>
 

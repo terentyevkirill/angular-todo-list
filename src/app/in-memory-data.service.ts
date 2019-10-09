@@ -10,16 +10,16 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     const todos = [
-      { id: 1, text: 'Feed cat' },
-      { id: 2, text: 'Do homework' },
-      { id: 3, text: 'Cook dinner' },
-      { id: 4, text: 'Do workout' },
-      { id: 5, text: 'Drink coffee' },
-      { id: 6, text: 'Meet with Ann' },
-      { id: 7, text: 'Read book' },
-      { id: 8, text: 'Ride a bike' },
-      { id: 9, text: 'Buy avocado' },
-      { id: 10, text: 'Call dad' }
+      { id: 1, text: 'Feed cat', date: new Date()},
+      { id: 2, text: 'Do homework', date: new Date()},
+      { id: 3, text: 'Cook dinner', date: new Date()},
+      { id: 4, text: 'Do workout', date: new Date()},
+      { id: 5, text: 'Drink coffee', date: new Date()},
+      { id: 6, text: 'Meet with Ann', date: new Date() },
+      { id: 7, text: 'Read book' , date: new Date()},
+      { id: 8, text: 'Ride a bike' , date: new Date()},
+      { id: 9, text: 'Buy avocado' , date: new Date()},
+      { id: 10, text: 'Call dad', date: new Date() }
     ];
 
     return {todos};

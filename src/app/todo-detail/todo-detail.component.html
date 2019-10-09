@@ -1,7 +1,10 @@
+<ng-content></ng-content>
 <div *ngIf="todo">
 
     <h2>{{ todo.text | uppercase }}</h2>
-    <div><span>id: </span>{{todo.id}}</div>
+    <div>
+        <span>id: </span>{{todo.id}}<br>
+        <span>Created at: </span>{{todo.date | date: 'yyyy-MM-dd'}}</div>
     <div>
         <label>Text:
             <!-- Two way data binding -->

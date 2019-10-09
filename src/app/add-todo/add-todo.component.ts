@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-todo',
@@ -11,8 +12,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddTodoComponent implements OnInit {
   todoForm: FormGroup;
   isSubmitted = false;
+  todo: Todo;
 
-  constructor(private todoService: TodoService, private formBuilder: FormBuilder) { }
+  constructor(private todoService: TodoService, private formBuilder: FormBuilder, private location: Location) { }
 
   ngOnInit() {
     this.buildForm();
@@ -20,16 +22,24 @@ export class AddTodoComponent implements OnInit {
 
   onSubmit() {
     this.isSubmitted = true;
-
     if (this.todoForm.invalid) { return; }
-    this.todoService.addTodo(this.todoForm.value as Todo)
-      .subscribe(_ => console.log(this.todoForm.value as Todo, 'Added'));
+    this.todo = this.todoForm.value as Todo;
+    this.todo.date = new Date();
+    this.todoService.addTodo(this.todo)
+      .subscribe(_ => {
+        console.log(this.todoForm.value as Todo, 'Added');
+        this.goBack();
+      });
   }
 
   private buildForm() {
     this.todoForm = this.formBuilder.group({
       text: [ '', Validators.required ]
     });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

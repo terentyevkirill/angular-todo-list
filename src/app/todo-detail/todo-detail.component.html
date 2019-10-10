@@ -3,8 +3,8 @@
 
     <h2>{{ todo.text | uppercase }}</h2>
     <div>
-        <span>id: </span>{{todo.id}}<br>
-        <span>Created at: </span>{{todo.date | date: 'yyyy-MM-dd'}}</div>
+        <span>id: </span>{{ todo.id }}<br>
+        <span>Created at: </span>{{ todo.date | date: 'yyyy-MM-dd hh:mm:ss' }}</div>
     <div>
         <label>Text:
             <!-- Two way data binding -->

@@ -35,6 +35,7 @@ export class TodoDetailComponent implements OnInit {
   }
 
   save(): void {
+    this.todo.date = new Date();
     this.todoService.updateTodo(this.todo)
       .subscribe(() => this.goBack());
   }

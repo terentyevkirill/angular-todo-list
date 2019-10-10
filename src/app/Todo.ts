@@ -4,9 +4,9 @@ export class Todo {
     text: string;
     date: Date;
 
-    constructor(text?: string) {
+    constructor(text?: string, date?: Date) {
         this.text = text;
-        this.date = new Date;
+        this.date = date;
     }
 
 }
